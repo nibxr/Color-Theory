@@ -1,0 +1,10 @@
+a {
+    text-decoration: none; /* Remove underlines */
+    color: #333; /* Default link color */
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  a:hover {
+    color: #ff5733; /* Change link color on hover */
+  }
+  

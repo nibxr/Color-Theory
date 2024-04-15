@@ -1,0 +1,185 @@
+:root {
+    --text-color: #111;
+    --bg-color: #ff0000;
+  }
+  
+  body {
+    font-family: termina, sans-serif;
+    color: var(--text-color);
+    background: var(--bg-color);
+    transition: 0.3s ease-out;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    overscroll-behavior: none;
+  }
+
+  * {
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    cursor: none;
+  }
+  
+
+  .cursor {
+    width: 3rem;
+    height: 3rem;
+    background: white;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transform-origin: 100% 100%;
+    mix-blend-mode: difference;
+  }
+  
+  section:not(.horizontal-scroll) {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    padding: 50px 10vw;
+    margin: auto;
+    place-items: center;
+  }
+  
+  img {
+    height: 90vh;
+    width: 90%;
+    object-fit: cover;
+  }
+  
+  h1 {
+    font-size: 5rem;
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 10vw;
+    left: 10vw;
+    z-index: 4;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 16vw;
+    }
+  }
+  h1 span {
+    display: block;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+    max-width: 1000px;
+  }
+  h4{
+    font-size: 6rem;
+    mix-blend-mode: color-burn ;
+    font-weight: bold;
+    margin-bottom: 150px;
+    top: 10%;
+    max-width: 1200px;
+  }
+  p{
+    font-size: 1rem;
+display: block;  }
+h6{
+    
+        font-size: 5rem;
+        line-height: 1;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        position: absolute;
+        top: 10vw;
+        margin-right: 24px;
+        left: 11vw;
+        z-index: 1;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        
+        mix-blend-mode:hard-light;
+        color: red;
+      
+}
+h7{
+    width: 530px;
+    height: 530px;
+    position: center;
+  
+color: #ff0000;    font-size: 1.6rem;
+    max-width: 1000px;
+    background-color: #111;
+    z-index: 2;
+}
+  
+  .credit {
+    font-family: Termina, sans-serif;
+  }
+  .credit a {
+    color: var(--text-color);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .horizontal-scroll {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    left: 0;
+    background-color: #111;
+    -webkit-text-fill-color: #ff0000;
+  }
+  
+  .pin-wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 10vw;
+    
+  }
+  .pin-wrap > * {
+    min-width: 60vw;
+    padding: 0 5vw;
+  }
+  
+  p {
+    position: absolute;
+    bottom: 10vw;
+    right: 10vw;
+    width: 600px;
+    line-height: 1.5;
+  }
+
+  /* Define a CSS class for the circle cursor */
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: rgb(255, 255, 255); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: .1s ease linear;
+    z-index: 999;
+}
+
+
+
+/* Increase cursor size for all menu items when the menu is hovered and the menu item is hovered */
+#menu.menu-hovered .circle {
+    transform: scale(5);
+    mix-blend-mode:difference;
+
+}

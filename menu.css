@@ -1,0 +1,323 @@
+
+
+body{
+    background-color: rgb(20, 20, 20);
+    margin: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: "termina, sans-serif";
+ 
+}
+.text-container {
+    transition: 1s ease;
+}
+
+/* Increase translateY for a more prominent effect */
+.text-container:hover {
+    transform: translateY(-20px); /* Adjust the value as needed */
+}
+#menu {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the left */
+}
+
+.menu-item {
+    margin-left: 8cm;
+    position: relative;
+    z-index: 2;
+    transition: opacity 400ms ease;
+}
+
+/* Add a CSS class for the fade-out effect */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease; /* You can adjust the duration as needed */
+}
+
+.separator-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(65% - 1px); /* Adjust the position as needed */
+    width: 2px; /* Adjust the width of the line */
+    background-color: gray; /* Set the line color */
+    z-index: 1; /* Ensure it's behind the videos */
+}
+
+.video-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%; /* Adjust the width as needed */
+    background-color: black; /* Set the background color to black */
+    z-index: 0; /* Ensure it's behind the videos */
+}
+.menu-item {
+    margin-left: 8cm;
+    position: absolute; 
+    z-index: 2;
+}
+.menu-item {
+    position: relative;
+    z-index: 2;
+}
+
+.menu-video {
+    position: absolute;
+    width: 400px;
+    height: auto;/* Vertically center the videos */
+    bottom: -5cm;
+    left: 14cm; /* Position videos on the right side */
+    display: none; /* Initially hide the videos */
+    opacity: 100;
+    transition: opacity 0.3 ease;
+}
+
+/* Add a black background for the video area */
+.video-area {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 9300px;
+    left: calc(60% + 2px); /* Adjust the position based on the separator line width */
+    right: 0;
+    background-color: black; /* Set the background color to black */
+    z-index: 0; /* Ensure it's behind the videos */
+}
+
+
+
+
+#menu[data-active-index="0"]>#menu-background-pattern {
+    background-position: 0% -33.3%;
+}
+
+#menu[data-active-index="1"]>#menu-background-pattern {
+    background-position: 0% -66.6%;
+}
+
+#menu[data-active-index="2"]>#menu-background-pattern {
+    background-position: 0% -100%;
+}
+
+/* Initial opacity for all menu items */
+.menu-item {
+    transition: opacity 400ms ease;
+    opacity: 1;
+}
+
+/* Full opacity on hover for all menu items */
+.menu-item:hover {
+    opacity: 1;
+}
+
+/* Reset opacity for non-hovered text menu items within #menu-items */
+#menu-items:hover .text-menu-item {
+    opacity: 0.3;
+}
+
+/* Full opacity for hovered text menu items */
+#menu-items:hover .text-menu-item:hover {
+    opacity: 1;
+}
+ 
+.menu-item {
+    color: rgb(248, 248, 248);
+    font-size: clamp(3rem, 8vw, 8rem);
+    font-family: "termina, sans-serif";
+    display: block;
+    text-decoration: none;
+    font-size: clamp(3rem, 7vw, 7rem);
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    text-decoration: none;
+    transition : opacity 400ms ease;
+}
+
+#text-container {
+    position: absolute;
+    top: 20%;
+    left: -8%; /* Adjust the initial left position as needed */
+    z-index: 2; /* Ensure the text is above other elements */
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-family: "termina, sans-serif";
+    color: white;
+    user-select: none; /* Disable text selection */
+    transition: transform 0.2s ease; /* Add a smooth transition effect */
+  }
+  
+  
+
+#menu-background-pattern {
+    height: 100vh;
+    width: calc(60% - 2px); /* Adjust the width based on the separator line width */
+    background-image: radial-gradient(
+        rgba(255, 255, 255, 0.1) 5%, /* Adjust the alpha value (last parameter) to control transparency */
+        transparent 2%
+    );
+    background-position: 0% 0%;
+    background-size: 8vmin 8vmin;
+    position: absolute;
+    left: 0;
+    z-index: 1; /* Keep it behind the videos */
+    transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
+}
+
+
+#menu-items:hover ~ #menu-background-pattern{
+    background-size: 11vmin 11vmin;
+    opacity: 0.5;
+}
+
+/* Add a gray separator line */
+.separator-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(60% - 1px); /* Adjust the position as needed */
+    width: 2px; /* Adjust the width of the line */
+    background-color: gray; /* Set the line color */
+    opacity: 20%;
+    z-index: 1; /* Ensure it's behind the videos */
+  }
+  
+/* Define a CSS class for the circle cursor */
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: rgb(255, 255, 255); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: .1s ease linear;
+    z-index: 999;
+}
+
+
+
+/* Increase cursor size for all menu items when the menu is hovered and the menu item is hovered */
+#menu.menu-hovered .circle {
+    transform: scale(5);
+    mix-blend-mode:difference;
+
+}
+
+
+/* Define a CSS class for the transition effect */
+.page-transition {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+
+  
+
+/* CSS for color transitions */
+.menu-item-red.text-menu-item:hover {
+    color: red;
+}
+
+.menu-item-green.text-menu-item:hover {
+    color: green;
+}
+
+.menu-item-blue.text-menu-item:hover {
+    color: blue;
+}
+
+
+/* CSS for video overlay transitions */
+.video-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-item:hover .video-overlay {
+    opacity: 0.7;
+}
+#calculator-container {
+    margin-top: 0px; /* Adjust the top margin to add space */
+    background-color: #435489; /* Change the background color to white or any color you prefer */
+    padding: 134px; /* Add padding for spacing and better visual separation */
+  }
+
+  .point{
+    height: 10px;
+    width: 10px;
+    background-color: aliceblue;
+    border: 2px solid white;
+    position: absolute;
+    left: 50.81%;
+    bottom: 1px;
+    border-radius: 70px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .scroll-down {
+    height: 50px;
+    width: 30px;
+    background-color: white;
+    border: 2px solid white;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 2;
+    scroll-behavior:smooth ;
+  }
+
+  .scroll-down::before,
+  .scroll-down::after{
+    content: '';
+    position: absolute;
+    top:5%;
+    left: 50%;
+    border: 2px solid black;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -60%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+  }
+
+  .scroll-down::after{
+    top: 30%;
+
+  }
+  @keyframes scroll-down{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top:90%
+    }
+  }
+
+  /*scrollbars */
+
+  ::-webkit-scrollbar{
+    width: 15px;
+  }
+  ::-webkit-scrollbar-track{
+    background: #d1e5ff;
+  } 
+  ::-webkit-scrollbar-thumb{
+    background: linear-gradient(#642bff,#ff22e6);
+  }

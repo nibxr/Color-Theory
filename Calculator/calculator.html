@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Color Mixer</title>
+</head>
+<body>
+    <div class="center">
+        <div class="calculator">
+            <div class="top-bar">
+                <div class="display">#000000</div>
+            </div>
+            <div class="keys">
+                <button class="color" data-color="Red">Red</button>
+                <button class="color" data-color="Green">Green</button>
+                <button class="color" data-color="Blue">Blue</button>
+                <button class="op clear">C</button>
+                <button class="op plus">+</button>
+                <button class="equals">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+    <audio id="clickSound">
+        <source src="click.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
